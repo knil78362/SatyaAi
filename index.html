@@ -61,3 +61,134 @@ alert("AI Video Generator Coming Soon!");
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SatyaAI</title>
+
+<style>
+body{
+font-family: Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+header{
+background:#2563eb;
+padding:20px;
+font-size:28px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+background:#22c55e;
+border:none;
+color:white;
+cursor:pointer;
+margin-top:20px;
+}
+
+section{
+margin-top:40px;
+}
+
+#chatbox{
+margin-top:40px;
+}
+
+input{
+padding:10px;
+width:60%;
+border:none;
+border-radius:5px;
+}
+
+#messages{
+margin-top:20px;
+text-align:left;
+width:60%;
+margin-left:auto;
+margin-right:auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+SatyaAI
+</header>
+
+<section>
+
+<h1>Welcome to SatyaAI</h1>
+
+<p>Create AI videos easily with SatyaAI tools.</p>
+
+<button onclick="createVideo()">Generate AI Video</button>
+
+</section>
+
+<!-- Chatbot -->
+
+<div id="chatbox">
+
+<h2>SatyaAI Chatbot 🤖</h2>
+
+<input id="userInput" placeholder="Ask something...">
+<button onclick="sendMessage()">Send</button>
+
+<div id="messages"></div>
+
+</div>
+
+<script>
+
+function createVideo(){
+alert("AI Video Generator Coming Soon!");
+}
+
+function sendMessage(){
+
+let input=document.getElementById("userInput").value
+let messages=document.getElementById("messages")
+
+messages.innerHTML += "<p><b>You:</b> "+input+"</p>"
+
+let reply=getReply(input)
+
+messages.innerHTML += "<p><b>SatyaAI:</b> "+reply+"</p>"
+
+document.getElementById("userInput").value=""
+
+}
+
+function getReply(text){
+
+text=text.toLowerCase()
+
+if(text.includes("hello"))
+return "Hello 👋"
+
+if(text.includes("who are you"))
+return "I am SatyaAI chatbot."
+
+if(text.includes("ai"))
+return "AI means Artificial Intelligence."
+
+if(text.includes("bye"))
+return "Goodbye 😊"
+
+return "I am still learning."
+
+}
+
+</script>
+
+</body>
+</html>
